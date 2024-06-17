@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 header {
@@ -179,17 +180,27 @@ h1 {
 }
 
 footer {
-    background-color: #333;
+    background-color: #3c1400;
     color: #fff;
     text-align: center;
     padding: 10px;
 }
 
 footer a {
-    color: #DEA054;
+    color: #f2ddb0;
     margin: 0 10px;
     text-decoration: none;
 }
+
+footer img {
+    padding-top: 10px;
+    width: 50px;
+    
+}
+
+
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
