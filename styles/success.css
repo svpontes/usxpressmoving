@@ -1,0 +1,141 @@
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2ddb0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 1px;
+    flex: 1; /* Para ocupar o espaço restante */
+}
+
+.left-section {
+    background-color: #f2ddb0;
+    color: #3c1400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 99%;
+}
+
+.left-section h1 {
+    margin: 0;
+    color: #3c1400;
+}
+
+.left-section p {
+    margin: 25px 10px;
+    color: #3c1400;
+}
+
+.left-section button {
+    padding: 10px 20px;
+    background-color: #3c1400;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.left-section button:hover {
+    background-color: #934f01;
+}
+
+.right-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.quote-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+    color: #3c1400;
+}
+
+.form-info {
+    flex: 1 1 25%;
+    max-width: 45%;
+    background-color: #f2ddb0;
+    padding: 20px;
+}
+
+.form-container {
+    flex: 1 1 25%;
+    max-width: 25%;
+    background-color: #f2ddb0;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.form-container form input,
+.form-container form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #f2ddb0;
+    border-radius: 5px;
+}
+
+.form-container form textarea {
+    resize: none;
+}
+
+.form-container form input:focus,
+.form-container form textarea:focus {
+    border-color: #3c1400;
+    outline: none;
+}
+
+.form-container form button {
+    padding: 10px;
+    background-color: #3c1400;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container form button:hover {
+    background-color: #934f01;
+}
+
+footer {
+    background-color: #3c1400;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #f2ddb0;
+    margin: 0 10px;
+    text-decoration: none;
+}
