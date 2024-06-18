@@ -160,6 +160,10 @@ h1 {
     outline: none; /* Remove o contorno padrão do navegador */
 }
 
+.d-none{
+    display: none;
+}
+
 
 
 .form-container form button {
