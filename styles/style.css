@@ -5,61 +5,48 @@ body {
 }
 
 header {
-    display: flex; /* Alterado para flexbox para facilitar o alinhamento */
-    justify-content: space-between; /* Distribui os elementos ao longo do header */
-    align-items: center; /* Centraliza verticalmente os itens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: none;
+    
 }
 
-header .logo{
-
+header .logo {
     flex: 1;
-    text-align:center;
+    text-align: center;
 }
 
 header img {
-    max-width: 300px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    max-height: 85px; /* Ajuste para limitar a altura da logo */
 }
 
-header .media-links{
-
+header .media-links {
     display: flex;
     gap: 10px;
 }
 
 header .media-links a {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     text-decoration: none;
-    padding: 10px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 
 header .media-links img {
-    width: 100%;
+    width: 35px;
+    max-width: 100%;
     height: auto;
-    display: block;
-    position: relative;
-
 }
-
-header .media-links .social-icon-instagram,
-header .media-links .social-icon-twitter,
-header .media-links .social-icon-facebook {
-    overflow: hidden; /* Esconde o conteúdo que transborda do elemento pai */
-    position: relative;
-}
-
 
 /* Pseudo-elemento para imagem de hover */
-header .media-links .social-icon-instagram::before,
-header .media-links .social-icon-twitter::before,
-header .media-links .social-icon-facebook::before,
-header .media-links .social-icon-whats::before  {
+header .media-links a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -67,30 +54,12 @@ header .media-links .social-icon-whats::before  {
     width: 100%;
     height: 100%;
     background-size: cover;
-    transition: opacity 0.3s ease; /* Transição suave com timing function ease */
-    opacity: 0; /* Inicia com opacidade 0 para não ser visível */
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
-header .media-links .social-icon-instagram:hover::before {
-    background-image: url('../images/sgv/hoverciculo.svg');
-    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
-}
-
-header .media-links .social-icon-twitter:hover::before {
-    background-image: url('../images/sgv/hoverciculo.svg');
-    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
-}
-
-header .media-links .social-icon-facebook:hover::before {
-    background-image: url('../images/sgv/hoverciculo.svg');
-    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
-
-}
-
-header .media-links .social-icon-whats:hover::before {
-    background-image: url('../images/sgv/whatsciculohover.svg');
-    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
-    
+header .media-links a:hover::before {
+    opacity: 1;
 }
 
 .container {
@@ -131,7 +100,7 @@ header .media-links .social-icon-whats:hover::before {
 
 .left-section button:hover {
     background-color: #934f01;
-    font: bolder;
+    font-weight: bolder; /* Corrigido para 'font-weight' */
 }
 
 .right-section img {
@@ -141,7 +110,7 @@ header .media-links .social-icon-whats:hover::before {
     opacity: 0.7;
 }
 
-/*----------area central com circulos about us------------*/
+/*----------área central com círculos 'about us'------------*/
 .aboutus-section {
     display: flex;
     justify-content: center;
@@ -226,7 +195,7 @@ h1 {
 .form-container form input:focus,
 .form-container form textarea:focus {
     border-color: #3c1400;
-    outline: none; /* Remove o contorno padrão do navegador */
+    outline: none;
 }
 
 .d-none {
@@ -269,6 +238,19 @@ footer img {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza itens no centro */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Espaçamento entre logo e ícones */
+    }
+
+    header .media-links {
+        justify-content: center; /* Centraliza os ícones */
+    }
+
     .container {
         grid-template-columns: 1fr;
         text-align: center;
