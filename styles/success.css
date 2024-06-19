@@ -1,16 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
-    position: relative;
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2ddb0;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    background-color: #f2ddb0;
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/png/logowingsandeagle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 header {
@@ -18,124 +37,107 @@ header {
     padding: 20px;
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    gap: 1px;
-    flex: 1; /* Para ocupar o espaço restante */
-}
-
-.left-section {
-    background-color: #f2ddb0;
-    color: #3c1400;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 20px;
+    padding-top: 40px;
     text-align: center;
-    height: 99%;
+    flex: 1; /* Ocupa o espaço disponível, mantendo o footer no final */
 }
 
-.left-section h1 {
-    margin: 0;
+a {
+    color: chocolate;
+    text-decoration: none;
+}
+
+p, h1 {
     color: #3c1400;
-}
-
-.left-section p {
-    margin: 25px 10px;
-    color: #3c1400;
-}
-
-.left-section button {
-    padding: 10px 20px;
-    background-color: #3c1400;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.left-section button:hover {
-    background-color: #934f01;
-}
-
-.right-section img {
-    max-width: 100%;
-    height: auto;
-}
-
-.quote-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    background-color: #fff;
-    color: #3c1400;
-}
-
-.form-info {
-    flex: 1 1 25%;
-    max-width: 45%;
-    background-color: #f2ddb0;
-    padding: 20px;
-}
-
-.form-container {
-    flex: 1 1 25%;
-    max-width: 25%;
-    background-color: #f2ddb0;
-}
-
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px;
-}
-
-.form-container form input,
-.form-container form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 2px solid #f2ddb0;
-    border-radius: 5px;
-}
-
-.form-container form textarea {
-    resize: none;
-}
-
-.form-container form input:focus,
-.form-container form textarea:focus {
-    border-color: #3c1400;
-    outline: none;
-}
-
-.form-container form button {
-    padding: 10px;
-    background-color: #3c1400;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.form-container form button:hover {
-    background-color: #934f01;
 }
 
 footer {
     background-color: #3c1400;
-    color: #fff;
+    color: #f2ddb0;
     text-align: center;
-    padding: 10px;
+    padding: 40px;
+    width: 100%;
+    position: relative; /* Permite que o footer fique dentro do fluxo do documento */
+}
+
+footer .email-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    word-wrap: break-word; /* Para quebrar a palavra, se necessário */
+}
+
+footer .email-field img {
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 footer a {
     color: #f2ddb0;
     margin: 0 10px;
     text-decoration: none;
+}
+
+footer a.social-icon {
+    font-size: 24px;
+}
+
+footer a.social-icon:hover {
+    color: #ffcc00; /* Cor de hover opcional */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px;
+    }
+
+    footer p {
+        margin: 10px 0;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+
+    footer .email-field {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+
+    footer .email-field {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    footer .email-field img {
+        margin: 0 0 10px 0; /* Ajuste de margem para telas pequenas */
+    }
 }
