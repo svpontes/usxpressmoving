@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Us Xpress Moving Services</title>
+    <title>Multilanguage Us Xpress Moving Services</title>
     <meta name="description" content="We are a small, family-owned business committed to customer satisfaction. We provide moving services throughout the United States.">
     <meta name="author" content="Sergio Pontes">
     <link rel="stylesheet" href="./styles/style.css">
@@ -16,68 +16,120 @@
         </div>
         <div class="media-links">
             <a href="#" class="social-icon social-icon-instagram">
-                <img src="./images/sgv/insta.svg" alt="icone for instagram">
+                <img src="./images/sgv/insta.svg" alt="Icon for Instagram">
             </a>
             <a href="#" class="social-icon social-icon-twitter">
-                <img src="./images/sgv/twitter.svg" alt="icon for twitter">
+                <img src="./images/sgv/twitter.svg" alt="Icon for Twitter">
             </a>
             <a href="#" class="social-icon social-icon-facebook">
-                <img src="./images/sgv/face.svg" alt="icon for facebook">
+                <img src="./images/sgv/face.svg" alt="Icon for Facebook">
             </a>
             <a href="#" class="social-icon social-icon-whats">
-                <img src="./images/sgv/whats.svg" alt="icon for whatsapp">
+                <img src="./images/sgv/whats.svg" alt="Icon for WhatsApp">
             </a>
             <a href="mailto:customerservice@usxpressmoving.com" class="social-icon">
-                <img src="./images/sgv/email2marrom.svg" alt="email logo directing to the customerservice@uxpressmoving.com">
+                <img src="./images/sgv/email2marrom.svg" alt="Email logo directing to customerservice@uxpressmoving.com">
             </a>
         </div>
+        <div class="language-switch">
+            <a href="#" id="toggleEnglish" class="language-link">English</a> | 
+            <a href="#" id="toggleSpanish" class="language-link">Español</a>
+        </div>
     </header>
-    <div class="container">
-        <div class="right-section">
-            <img src="./images/webp/banner cinzento atualiozado.webp" alt="Moving Services">
+    <div id="englishContent">
+        <div class="container">
+            <div class="right-section">
+                <img src="./images/webp/banner cinzento atualiozado.webp" alt="Moving Services">
+            </div>
+            <div class="left-section">
+                <h1>WELCOME TO<br>US Xpress Moving</h1>
+                <p>We are a family-owned business committed to customer satisfaction. <br>We provide moving services throughout the United States.</p>
+                <button type="submit" form="formulario">Contact us</button>
+            </div>
         </div>
-        <div class="left-section">
-            <h1>WELCOME TO<br>US Xpress Moving</h1>
-            <p>We are a family-owned business committed to customer satisfaction. <br>We provide moving services throughout the United States.</p>
-            <button type="submit" form="formulario">Contact Us</button>
+        <h1>We care About</h1>
+        <div class="aboutus-section">
+            <div>
+                <img src="./images/webp/safetyb.webp" alt="Safety image of Moving Services">
+                <h2>Safety Transportation</h2>
+                <p>At US Xpress Moving, safety is our top priority. We are committed to ensuring that your belongings arrive at their destination in perfect condition. Our team is highly trained to handle your items with the utmost care, providing peace of mind throughout the entire moving process.</p>
+            </div>
+            <div>
+                <img src="./images/webp/unpack.webp" alt="Unpacking image of Moving Services">
+                <h2>Packing and Unpacking Service</h2>
+                <p>Our packing and unpacking service is designed to make your move easier. We provide high-quality materials and experienced professionals to pack your belongings safely and efficiently. After the move, we also take care of the unpacking, organizing your items in your new location according to your instructions, so you can feel at home quickly.</p>
+            </div>
+            <div>
+                <img src="./images/webp/pirices.webp" alt="Prices images for Moving Services">
+                <h2>Affordable Prices</h2>
+                <p>At US Xpress Moving, we believe that quality moving services don't have to be expensive. We offer affordable and competitive prices, ensuring you get the best value for your money. Our customized packages are designed to meet your specific needs without compromising on quality or safety.</p>
+            </div>
+        </div>
+        <h1>Ask for a Quote</h1>
+        <div class="quote-section">
+            <div class="form-info">
+                <h2>Transparent Quotes at No Extra Cost</h2>
+                <p>Receive upfront pricing and avoid unexpected charges. We ensure transparency in all our services.</p>
+                <h2>Let us Know Your Needs</h2>
+                <p>Based on your needs, we will do our best to offer you outstanding customer service. Please provide moving origin and destination, and we will be glad to assist you.</p>
+            </div>
+            <div class="form-container">
+                <form id="formulario" name="formulario" netlify data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/">
+                    <input class="d-none" name="bot-field">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Your message" rows="5" autocomplete="off" required></textarea>
+                    <button type="submit" form="formulario">Request Your Quote</button>
+                </form>
+            </div>
         </div>
     </div>
-    <h1>We care About</h1>
-    <div class="aboutus-section">
-        <div>
-            <img src="./images/webp/safetyb.webp" alt="safty image of Moving Services">
-            <h2>Safety Transportation</h2>
-            <p><br>Safety Transportation
-                At US Xpress Moving, safety is our top priority. We are committed to ensuring that your belongings arrive at their destination in perfect condition. Our team is highly trained to handle your items with the utmost care, providing peace of mind throughout the entire moving process.</p>
+    <div id="spanishContent" style="display: none;">
+        <div class="container">
+            <div class="right-section">
+                <img src="./images/webp/banner cinzento atualiozado.webp" alt="Servicios de Mudanza">
+            </div>
+            <div class="left-section">
+                <h1>BIENVENIDO A<br>US Xpress Moving</h1>
+                <p>Somos una empresa familiar comprometida con la satisfacción del cliente. <br>Proporcionamos servicios de mudanza en todo Estados Unidos.</p>
+                <button type="submit" form="formulario">Contáctanos</button>
+            </div>
         </div>
-        <div>
-            <img src="./images/webp/unpack.webp" alt="unpack image on Moving Services">
-            <h2>Packing and unpacking Service</h2>
-            <p>Our packing and unpacking service is designed to make your move easier. We provide high-quality materials and experienced professionals to pack your belongings safely and efficiently. After the move, we also take care of the unpacking, organizing your items in your new location according to your instructions, so you can feel at home quickly.
-            </p>
+        <h1>Nos Importa</h1>
+        <div class="aboutus-section">
+            <div>
+                <img src="./images/webp/safetyb.webp" alt="Imagen de seguridad de los Servicios de Mudanza">
+                <h2>Transporte Seguro</h2>
+                <p>En US Xpress Moving, la seguridad es nuestra máxima prioridad. Estamos comprometidos a asegurar que sus pertenencias lleguen a su destino en perfectas condiciones. Nuestro equipo está altamente capacitado para manejar sus artículos con el máximo cuidado, brindándole tranquilidad durante todo el proceso de mudanza.</p>
+            </div>
+            <div>
+                <img src="./images/webp/unpack.webp" alt="Imagen de desembalaje de los Servicios de Mudanza">
+                <h2>Servicio de Embalaje y Desembalaje</h2>
+                <p>Nuestro servicio de embalaje y desembalaje está diseñado para hacer su mudanza más fácil. Proporcionamos materiales de alta calidad y profesionales experimentados para empacar sus pertenencias de manera segura y eficiente. Después de la mudanza, también nos encargamos del desembalaje, organizando sus artículos en su nueva ubicación según sus instrucciones, para que pueda sentirse como en casa rápidamente.</p>
+            </div>
+            <div>
+                <img src="./images/webp/pirices.webp" alt="Imagen de precios para los Servicios de Mudanza">
+                <h2>Precios Asequibles</h2>
+                <p>En US Xpress Moving, creemos que los servicios de mudanza de calidad no tienen que ser costosos. Ofrecemos precios asequibles y competitivos, asegurando que obtenga el mejor valor por su dinero. Nuestros paquetes personalizados están diseñados para satisfacer sus necesidades específicas sin comprometer la calidad o la seguridad.</p>
+            </div>
         </div>
-        <div>
-            <img src="./images/webp/pirices.webp" alt="prices images for Moving Services">
-            <h2>Affordable Prices</h2>
-            <p><br>At US Xpress Moving, we believe that quality moving services don't have to be expensive. We offer affordable and competitive prices, ensuring you get the best value for your money. Our customized packages are designed to meet your specific needs without compromising on quality or safety.</p>
-        </div>
-    </div>
-    <h1>Ask for a Quote</h1>
-    <div class="quote-section">
-        <div class="form-info">
-            <h2>Transparent Quotes at No Extra Cost</h2>
-            <p>Receive upfront pricing and avoid unexpected charges. We ensure transparency in all our services.</p>
-            <h2>Let us Know Your Needs</h2>
-            <p>Based on your needs we will do our best to offer you outstanding customer service. Please provide moving origem and destination, we will be glad to assist you.</p>
-        </div>
-        <div class="form-container">
-            <form id="formulario" name="formulario" netlify data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/">
-                <input class="d-none" name="bot-field">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Your message" rows="5" autocomplete="off" required></textarea>
-                <button type="submit" form="formulario">Request Your Quote</button>
-            </form>
+        <h1>Solicite una Cotización</h1>
+        <div class="quote-section">
+            <div class="form-info">
+                <h2>Cotizaciones Transparentes Sin Costos Adicionales</h2>
+                <p>Reciba precios por adelantado y evite cargos inesperados. Aseguramos transparencia en todos nuestros servicios.</p>
+                <h2>Háganos Saber Sus Necesidades</h2>
+                <p>Basado en sus necesidades, haremos nuestro mejor esfuerzo para ofrecerle un servicio al cliente excepcional. Proporcione el origen y destino de la mudanza, estaremos encantados de ayudarle.</p>
+            </div>
+            <div class="form-container">
+                <form id="formulario" name="formulario" netlify data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/successes.html">
+                    <input class="d-none" name="bot-field">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <textarea name="message" placeholder="Su mensaje" rows="5" autocomplete="off" required></textarea>
+                    <button type="submit" form="formulario">Solicite su Cotización</button>
+                </form>
+            </div>
         </div>
     </div>
     <footer>
@@ -100,6 +152,9 @@
                 <img src="./images/sgv/whatshover.svg" alt="icon for whatsapp">
             
         </div>
+        <p>US Xpress Moving © 2024. All rights reserved.</p>
     </footer>
+       
+    <script src="./scripts/switchlanguage.js"></script>
 </body>
 </html>
