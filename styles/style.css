@@ -164,7 +164,7 @@ header .media-links .social-icon-whats:hover::before {
 }
 
 .aboutus-section img {
-    width: 250px;
+    width: 180px;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -348,4 +348,24 @@ footer img {
     footer a {
         margin: 0 5px;
     }
+}
+
+/*css adicional ingles espanhol*/
+
+.language-switch {
+    display: flex;
+    gap: 10px;
+    margin-left: 5px;
+    
+}
+
+.language-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #3c1400;
+}
+
+.language-link:hover {
+    
+    text-decoration: underline;
 }
