@@ -357,15 +357,20 @@ footer img {
     gap: 10px;
     margin-left: 5px;
     
+    
 }
 
-.language-link {
+.language-switch a {
     cursor: pointer;
     text-decoration: none;
     color: #3c1400;
+    
 }
 
-.language-link:hover {
+.language-switch a:hovers {
     
     text-decoration: underline;
+    
+    
 }
+
