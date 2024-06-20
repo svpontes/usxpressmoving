@@ -30,8 +30,8 @@ header .media-links {
 }
 
 header .media-links a {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -43,10 +43,22 @@ header .media-links img {
     width: 35px;
     max-width: 100%;
     height: auto;
+    z-index: 1; /* Definir z-index maior para ficar na frente */
 }
 
 /* Pseudo-elemento para imagem de hover */
-header .media-links a::before {
+header .media-links .social-icon-instagram,
+header .media-links .social-icon-twitter,
+header .media-links .social-icon-facebook {
+    overflow: hidden; /* Esconde o conteúdo que transborda do elemento pai */
+    position: relative;
+}
+
+/* Pseudo-elemento para imagem de hover */
+header .media-links .social-icon-instagram::before,
+header .media-links .social-icon-twitter::before,
+header .media-links .social-icon-facebook::before,
+header .media-links .social-icon-whats::before {
     content: '';
     position: absolute;
     top: 0;
@@ -54,12 +66,29 @@ header .media-links a::before {
     width: 100%;
     height: 100%;
     background-size: cover;
-    transition: opacity 0.3s ease;
-    opacity: 0;
+    transition: opacity 0.3s ease; /* Transição suave com timing function ease */
+    opacity: 0; /* Inicia com opacidade 0 para não ser visível */
+    z-index: 0; /* Definir z-index menor para ficar atrás */
 }
 
-header .media-links a:hover::before {
-    opacity: 1;
+header .media-links .social-icon-instagram:hover::before {
+    background-image: url('../images/sgv/hoverciculo.svg');
+    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
+}
+
+header .media-links .social-icon-twitter:hover::before {
+    background-image: url('../images/sgv/hoverciculo.svg');
+    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
+}
+
+header .media-links .social-icon-facebook:hover::before {
+    background-image: url('../images/sgv/hoverciculo.svg');
+    opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
+}
+
+header .media-links .social-icon-whats:hover::before {
+        background-image: url('../images/sgv/whatsciculohover.svg');
+        opacity: 1; /* Torna a imagem de hover visível ao passar o mouse */
 }
 
 .container {
